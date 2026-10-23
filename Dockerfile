@@ -1,5 +1,5 @@
 #build stage
-FROM node:1.8 AS build
+FROM node:18 AS build
 
 #create working directory
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 #production stage
-FROM node:1.8-slim
+FROM node:18-slim
 
 #create working directory
 WORKDIR /app
